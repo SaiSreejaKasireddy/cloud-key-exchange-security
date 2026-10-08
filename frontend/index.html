@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure Cloud Key Exchange</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>Secure Cloud Data System</h1>
+                <p>Privacy-Preserving Key Exchange in Cloud Computing</p>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span id="connectionStatus">Disconnected</span>
+            </div>
+        </header>
+
+
+        <!-- Key Exchange Section -->
+        <section class="card">
+
+            <div class="card-header">
+                <div>
+                    <h2>🔐 Secure Key Exchange</h2>
+                    <p>Establish a shared encryption key using ECDH.</p>
+                </div>
+            </div>
+
+            <div class="algorithm-info">
+
+                <div class="info-box">
+                    <span>Key Exchange</span>
+                    <strong>ECDH</strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Curve</span>
+                    <strong>SECP256R1</strong>
+                </div>
+
+                <div class="info-box">
+                    <span>Key Derivation</span>
+                    <strong>HKDF-SHA256</strong>
+                </div>
+
+            </div>
+
+            <button id="keyExchangeBtn">
+                Establish Secure Connection
+            </button>
+
+            <div id="keyExchangeResult" class="result"></div>
+
+        </section>
+
+
+        <!-- Encryption Section -->
+        <section class="card">
+
+            <div class="card-header">
+                <div>
+                    <h2>🔒 Encrypt & Store Data</h2>
+                    <p>Your data is encrypted before being stored.</p>
+                </div>
+            </div>
+
+            <label for="message">Sensitive Data</label>
+
+            <textarea
+                id="message"
+                placeholder="Enter confidential data..."
+                rows="5"
+            ></textarea>
+
+            <button id="encryptBtn">
+                Encrypt & Store
+            </button>
+
+            <div id="encryptionResult" class="result"></div>
+
+        </section>
+
+
+        <!-- Storage Section -->
+        <section class="card">
+
+            <div class="card-header">
+                <div>
+                    <h2>☁️ Cloud Storage</h2>
+                    <p>Retrieve encrypted data using its storage ID.</p>
+                </div>
+            </div>
+
+            <div class="storage-display">
+
+                <div class="storage-item">
+                    <span>Storage ID</span>
+                    <strong id="storageId">—</strong>
+                </div>
+
+                <div class="storage-item">
+                    <span>Encryption</span>
+                    <strong>AES-256-GCM</strong>
+                </div>
+
+                <div class="storage-item">
+                    <span>Status</span>
+                    <strong id="storageStatus">No data stored</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Decryption Section -->
+        <section class="card">
+
+            <div class="card-header">
+                <div>
+                    <h2>🔓 Retrieve & Decrypt</h2>
+                    <p>Retrieve encrypted data and decrypt it securely.</p>
+                </div>
+            </div>
+
+            <label for="decryptStorageId">Storage ID</label>
+
+            <input
+                type="number"
+                id="decryptStorageId"
+                placeholder="Enter storage ID"
+            >
+
+            <button id="decryptBtn">
+                Retrieve & Decrypt
+            </button>
+
+            <div id="decryptionResult" class="result"></div>
+
+        </section>
+
+
+        <!-- Security Information -->
+        <section class="security-panel">
+
+            <h2>🛡️ Security Architecture</h2>
+
+            <div class="security-flow">
+
+                <div>ECDH</div>
+                <span>→</span>
+
+                <div>Shared Secret</div>
+                <span>→</span>
+
+                <div>HKDF</div>
+                <span>→</span>
+
+                <div>AES-256-GCM</div>
+                <span>→</span>
+
+                <div>Cloud Storage</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                Key Exchange Privacy-Preserving Technique in Cloud Computing
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
